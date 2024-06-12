@@ -1,0 +1,29 @@
+
+/* navbar */
+.navbar {
+    background-color: #00366b; 
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #000000 !important; 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important; 
+    margin-right: 1rem;
+    font-weight: normal; 
+}
+
+.navbar-nav .nav-link.active {
+    color: #000000 !important; 
+    font-weight: bold; 
+}
+
+.nav-item {
+    padding-left: 12px;
+}
+
+/* -------------------- */
