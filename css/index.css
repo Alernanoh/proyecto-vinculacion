@@ -223,6 +223,12 @@
     transform: rotate(-45deg);
 }
 
+.botones{
+    background-color: #6ed9f1;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
 
 /*Para que ajustar el diseño de tarjetas y sea responsive*/
 
