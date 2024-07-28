@@ -1,0 +1,23 @@
+header{
+  padding: 60px;
+  text-align: center;
+  background-image: url("../images/toeianime.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1{
+  font-size: 40px;
+  margin 0-0-20px;
+}
+
+header p{
+  margin: 0 0 10px;
+}
+
+header div{
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
