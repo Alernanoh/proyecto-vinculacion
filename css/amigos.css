@@ -44,14 +44,15 @@ main {
 
 section {
     margin-bottom: 2em;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(135, 235, 190, 0.8);
+    border-color: black;
 }
 
 h2 {
-    color: #333;
+    color: #000000;
 }
 
 .card {
