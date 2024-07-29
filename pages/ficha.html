@@ -64,9 +64,10 @@
                     <input type="text" id="hemog" placeholder="Ingresar los niveles de hemoglobina">
                 </div>
             </section>
+
             <section class="cdi-genero">
                 <fieldset>
-                    <img class="img-icon" src="../img/usuario.avif" alt="Imagen de usuario"/>
+                    <img id="gender-img" class="img-icon" src="../img/icono_perfil.avif" alt="Imagen de usuario"/>
                     <div class="cdi-check">
                         <legend>Género</legend>
                         <div class="cdi-item">
@@ -79,6 +80,7 @@
                     </div>
                 </fieldset>
             </section>
+            
             <section class="cdi-categoria">
                 <div class="txt-tile">
                     <h1>Mi Gráfica con Chart.js</h1>
@@ -146,11 +148,18 @@
                 </select>
             </section>
             <section class="CDI-comentarios">
-                <h5 class="cdi-Tcomentario">Antecedentes PC/F</h5>
+                <h5 class="cdi-Tcomentario">Antecedentes</h5>
                 <div class="cdi-comentario">
-                    <textarea class="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tus comentarios aquí..."></textarea>
+                    <div class="comentario-container">
+                        <label for="antecedentes-padres">Antecedentes de los Padres:</label>
+                        <textarea id="antecedentes-padres" class="comentarios" name="antecedentes-padres" placeholder="Escribe los antecedentes de los padres aquí..."></textarea>
+                    </div>
+                    <div class="comentario-container">
+                        <label for="antecedentes-nino">Antecedentes del Niño:</label>
+                        <textarea id="antecedentes-nino" class="comentarios" name="antecedentes-nino" placeholder="Escribe los antecedentes del niño aquí..."></textarea>
+                    </div>
                 </div>
-            </section>
+            </section>            
         </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -16,18 +16,17 @@
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
   <body>
-
     <header>
       <div>
-        <img src="images/toeilogo.webp" alt="">
+        <img style="width: 180px;height: 180px ;" src="../img/logo_itsqmet.jpg" alt="Logo de Emblemático Ungüí">
         <h1>Emblemático Ungüí</h1>
         <p>Conoce nuestro labor por una mejoría en la vida de los niños.</p>
       </div>
     </header>
 
-      <div class="container-fluid text-center" class="grid"  style="height: 50px;">
-        <div class="row">
-         <div class="col">
+    <div class="container-fluid text-center" style="height: 50px;">
+      <div class="row">
+        <div class="col">
           <a href="../index.html">Inicio</a>
         </div>
         <div class="col">
@@ -36,16 +35,14 @@
         <div class="col">
           <a href="https://www.google.com/maps/place/CBV+Ung%C3%BBi/@-0.244669,-78.5384117,15z/data=!4m6!3m5!1s0x91d59916c553b639:0x3a37be4c89eecbdc!8m2!3d-0.244669!4d-78.5384117!16s%2Fg%2F11g9nl_m4r?entry=ttu" target="_blank">Ubicación</a>
         </div>
-        </div>
+      </div>
     </div>
-
 
     <div class="container">
       <main class="content">
         <article class="article">
           <h1>Misión</h1>
-          <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio tenetur eaque
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio tenetur eaque
       totam? Et suscipit perferendis voluptatem doloremque ratione tempora vel, corporis
       cum voluptas aliquid placeat! Maiores dolor omnis at sunt.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus voluptas
@@ -85,24 +82,76 @@
       </main>
       <aside class="sidebar">
         <div>
-          <img src="images/katsuhiro.png" alt="">
-            <p> Msc. Jhasmyn Sotomayor B. Coordinadora general</p>
+          <p>Msc. Jhasmyn Sotomayor B. Coordinadora general</p>
         </div>
         <div>
-          <img src="images/perotoei.png" alt="">
-            <p>Brindamos el mejor cuidado para todos los niños en nuestro centro.</p>
+          
+          <p>Brindamos el mejor cuidado para todos los niños en nuestro centro.</p>
         </div>
         <div>
-          <img src="images/dbzwe.webp" alt="">
-            <p>Se trata de mejorar la vida de los niños en cada etapa de sus vidas.</p>
+          <p>Se trata de mejorar la vida de los niños en cada etapa de sus vidas.</p>
         </div>
       </aside>
-
     </div>
 
-    <footer>
-      <p>&copy; 2024 LUTI Y SUS NUTRIAVENTURAS. </p>
-    </footer>
+ 
+    <!-- Nueva sección de videos educativos -->
+    <section class="videos-section">
+      <h2>Videos Educativos</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/sKt1KuuqN30" title="Video Educativo 1" frameborder="0" allowfullscreen></iframe>
+          <p>Aprende sobre actividades educativas para niños pequeños.</p>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/Q4NrQKLwQgw" title="Video Educativo 2" frameborder="0" allowfullscreen></iframe>
+          <p>Explora juegos y técnicas para el desarrollo infantil.</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Nueva sección de fotos del centro -->
+<section class="photos-section">
+  <h2>Galería del Centro</h2>
+  <div class="photo-gallery">
+    <div class="photo-item">
+      <img src="../img/galeria_emblematico.jpg" alt="Foto 1" class="gallery-image" data-caption="Actividades en el centro">
+      <p>Actividades en el centro</p>
+    </div>
+    <div class="photo-item">
+      <img src="../img/galeria_2.jpg" alt="Foto 2" class="gallery-image" data-caption="Momentos especiales">
+      <p>Momentos especiales</p>
+    </div>
+    <div class="photo-item">
+      <img src="../img/galeria_3.jpg" alt="Foto 3" class="gallery-image" data-caption="Diversión y aprendizaje">
+      <p>Diversión y aprendizaje</p>
+    </div>
+  </div>
+
+  <!-- Modal para imagen ampliada -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content-wrapper">
+      <span class="prev">&#10094;</span>
+      <img class="lightbox-content" id="lightbox-image">
+      <span class="next">&#10095;</span>
+    </div>
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-text">
+      <p>&copy; 2024 LUTI Y SUS NUTRIAVENTURAS. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-contact">
+      <p>Contacto: <a href="mailto:contacto@example.com">contacto@example.com</a></p>
+    </div>
+  </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/prueba.js"></script>
   </body>
 </html>

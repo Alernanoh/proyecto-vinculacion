@@ -132,19 +132,36 @@ body {
 }
 
 /*-------Comentarios----------*/
+.CDI-comentarios h5 {
+    font-size: 15px;
+    margin-top: 10%;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+
 .cdi-comentario {
-    max-width: 80%;
-    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    max-width: 90%; 
+    margin-left: 5%; 
+}
+
+.comentario-container {
+    flex: 1 1 45%; 
+    margin: 0 10px;
+    min-width: 200px; 
 }
 
 .comentarios {
-    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 2%;
     max-width: 100%; 
-    max-height: 100%; 
     resize: none; 
     font-size: 16px;
 }
+
 
 /*Diseño responsive*/
 @media screen and (max-width: 1220px) {
@@ -214,11 +231,14 @@ body {
     }
 
     /*comentarios*/
-    .CDI-comentarios h5 {
-        font-size: 15px;
-        margin-top: 10%;
-        padding: 5px;
-        margin-bottom: 2%;
+    .cdi-comentario {
+        flex-direction: column;
+        margin-left: 5%; /* Ajusta los márgenes en pantallas más pequeñas */
+    }
+
+    .comentario-container {
+        margin: 10px 0;
+        min-width: auto; /* Permite que el ancho mínimo sea flexible en pantallas pequeñas */
     }
 }
 

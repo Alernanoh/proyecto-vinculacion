@@ -147,3 +147,61 @@ function actualizarGrafica(peso, talla, hemoglobina, imc) {
         options: options
     });
 }
+
+//Funcion para cambiar la imagen del niño segun la opcion que se escoja 
+document.addEventListener('DOMContentLoaded', function() {
+    const genderImg = document.getElementById('gender-img');
+    const masculinoRadio = document.getElementById('id-masculino');
+    const femeninoRadio = document.getElementById('id-femenino');
+
+    masculinoRadio.addEventListener('change', function() {
+        if (masculinoRadio.checked) {
+            genderImg.src = '../img/usuario.avif'; 
+        }
+    });
+    
+    femeninoRadio.addEventListener('change', function() {
+        if (femeninoRadio.checked) {
+            genderImg.src = '../img/avatar_niña.png'; 
+        }
+    });
+});
+
+//Función para descargar documento PDF(Screen cuadro.html)
+
+document.querySelector('.btn-secondary').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = '../pdf/documento.html.pdf'; 
+    link.download = 'Información.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+
+//FUNCIÓN PARA LA GALERIA DE EMBLEMATICO UNGUI
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImage.src = this.src;
+            lightboxCaption.textContent = this.dataset.caption;
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
