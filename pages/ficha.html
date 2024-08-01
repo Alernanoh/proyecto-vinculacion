@@ -43,7 +43,13 @@
             <section class="cdi-info">
                 <div class="datos">
                     <label for="cedula">Cédula:</label>
-                    <input type="text" id="cedula">
+                    <input type="text" id="cedula" placeholder="Ingrese la celula del niño">
+                    <br><br>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ingrese los dos nombres del niño/a">
+                    <br><br>
+                    <label for="apellido">Apellido Completo:</label>
+                    <input type="text" id="apellido" placeholder="Ingrese los dos apellidos del niño/a">
                     <br><br>
                     <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
                     <input type="date" id="fecha-nacimiento" onchange="calcularEdad()">
@@ -54,15 +60,51 @@
                     <label for="meses">Meses</label>
                     <input type="text" id="meses" placeholder="Meses" readonly>
                     <br><br>
-                    <label for="peso">Peso (kg)</label>
-                    <input type="text" id="peso" placeholder="Ingresar el peso en kg">
+                    <label>Medidas Antropometricas</label>
                     <br><br>
-                    <label for="talla">Talla (m)</label>
-                    <input type="text" id="talla" placeholder="Ingresar la talla en metros">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" placeholder="Ingresar el peso en kg">
+                    <br><br>
+                    <label for="talla">Talla (mt)</label>
+                    <input type="number" id="talla" placeholder="Ingresar la talla en metros">
+                    <br><br>
+                    <label for="perimetro-cefalico">Perímetro cefálico(cm)</label>
+                    <input type="text" id="perimetro-cefalico" placeholder="Ingresar el Perímetro cefálico">
+                    <br><br>
+                    <label for="perimetro-toracico">Perímetro torácico(cm)</label>
+                    <input type="text" id="perimetro-cefalico" placeholder="Ingresar el Perímetro torácico">
+                    <br><br>
+                    <label for="perimetro-abdominal">Perímetro Abdominal(cm)</label>
+                    <input type="text" id="perimetro-abdominal" placeholder="Ingresar el Perímetro Abdominal">
+                    <br><br>
+                    <label>Signos Vitales</label>
+                    <br><br>
+                    <label for="frecuencia-cardiaca">FC: Frecuencia Cardíaca</label>
+                    <input type="text" id="frecuencia-cardiaca" placeholder="Ingresar la Frecuencia Cardíaca">
+                    <br><br>
+                    <label for="frecuencia-respiratoria">FR: Frecuencia Respiratoria</label>
+                    <input type="text" id="frecuencia-respiratoria" placeholder="Ingresar la Frecuencia Respiratoria">
+                    <br><br>
+                    <label for="saturacion-oxigeno">SPO2: Saturación de Oxígeno</label>
+                    <input type="text" id="saturacion-oxigeno" placeholder="Ingresar la Saturación de Oxígeno">
+                    <br><br>
+                    <label for="temperatura-corporal">T°: Temperatura Corporal</label>
+                    <input type="text" id="temperatura-corporal" placeholder="Ingresar la Temperatura Corporal">
+                    <br><br>
+                    <label>Valores Hemodinámicos</label>
                     <br><br>
                     <label for="hemog">Hemoglobina</label>
                     <input type="text" id="hemog" placeholder="Ingresar los niveles de hemoglobina">
+                    <br><br>
+                    <label for="hemotocrito">Hemotocrito</label>
+                    <input type="text" id="hemotocrito" placeholder="Ingresar los niveles de hemotocrito">
+                    <br><br>
+                 
                 </div>
+                <div class="calculo">
+                 <button type="button" onclick="calcularIMC()">Calcular</button>
+                </div>
+               
             </section>
 
             <section class="cdi-genero">
@@ -78,19 +120,37 @@
                             <input type="radio" name="genero" id="id-femenino" value="femenino">
                         </div>
                     </div>
+                    <div class="txt-area">
+                        <textarea class="alerta" id="IMC" rows="5" placeholder="Mensaje de Alerta" readonly></textarea>
+                   </div> 
                 </fieldset>
             </section>
             
             <section class="cdi-categoria">
-                <div class="txt-tile">
-                    <h1>Mi Gráfica con Chart.js</h1>
-                    <textarea class="alerta" id="IMC" rows="10" placeholder="Mensaje de Alerta"></textarea>
-                </div>
-                <div>
-                    <button type="button" onclick="calcularIMC()">Calcular IMC</button>
-                </div>
-                <canvas id="graficaPercentil" width="600" height="200"></canvas>
+               
+                 <div class="cdi-percentil">
+                    <h1 class="txt-title">Logintud/Edad Niño</h1>
+                    <canvas id="growthChart"></canvas>
+
+                    <h1 class="txt-title">Logintud/Edad Niña</h1>
+                    <canvas id="secondChart"></canvas> 
+
+                    <h1 class="txt-title">Peso/Edad Niño</h1>
+                    <canvas id="thirdChart"></canvas> 
+
+                    <h1 class="txt-title">Peso/Edad Niña</h1>
+                    <canvas id="fourChart"></canvas> 
+          
+                      <h1 class="txt-title">IMC/Edad Niña</h1>
+                    <canvas id="fiveChart"></canvas> 
+               
+                    <h1 class="txt-title">IMC/Edad Niño</h1>
+                    <canvas id="sixChart"></canvas> 
+                
+            </div>
             </section>
+
+
             <section>
                 <h4>Tipo de dietas</h4>
                 <div class="cdi-dietas">
@@ -163,6 +223,7 @@
         </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../js/prueba.js"></script>
+    <script src="../js/percentil.js"></script>
+    <script src="../js/calculos.js"></script>
 </body>
 </html>
