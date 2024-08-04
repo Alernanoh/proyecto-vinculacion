@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documento PDF - Luti y sus Nutriaventuras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #00366b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .index {
+            margin-bottom: 30px;
+        }
+
+        .index h2 {
+            font-size: 2em;
+            color: #00366b;
+        }
+
+        .index ol {
+            list-style: decimal inside;
+        }
+
+        .index li {
+            margin-bottom: 10px;
+        }
+
+        .index a {
+            text-decoration: none;
+            color: #00366b;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #00366b;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00366b;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00366b;
+            color: white;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #contacto p {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .chart {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .additional-info {
+            margin-top: 40px;
+        }
+
+        .additional-info p {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luti y sus Nutriaventuras</h1>
+        <p>Bienvenido al documento informativo sobre Luti y sus Nutriaventuras y el Centro de Desarrollo Infantil (CDI).</p>
+    </header>
+    
+    <div class="index">
+        <h2>Índice</h2>
+        <ol>
+            <li><a href="#ficha-medica">Ficha Médica</a></li>
+            <li><a href="#percentil">Percentil de Crecimiento</a></li>
+            <li><a href="#nutricional">Tabla de Información Nutricional</a></li>
+            <li><a href="#additional-info">Información Adicional</a></li>
+            <li><a href="#contacto">Información de Contacto</a></li>
+        </ol>
+    </div>
+
+    <div id="ficha-medica" class="section">
+        <h2>Ficha Médica</h2>
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>Edad:</strong> 2 años</p>
+        <p><strong>Peso:</strong> 12 kg</p>
+        <p><strong>Altura:</strong> 85 cm</p>
+        <p><strong>Alergias:</strong> Ninguna</p>
+        <p><strong>Condiciones Médicas:</strong> Ninguna</p>
+        <p><strong>Historial Médico:</strong> Juan ha tenido un historial médico saludable con controles regulares y sin incidentes significativos. Sus vacunas están al día.</p>
+        <p><strong>Desarrollo:</strong> Juan muestra un desarrollo normal para su edad. Está alcanzando hitos importantes como caminar y decir algunas palabras simples.</p>
+    </div>
+
+    <div id="percentil" class="section center">
+        <h2>Percentil de Crecimiento</h2>
+        <div class="chart">
+            <svg width="100%" height="300" viewBox="0 0 400 300">
+                <rect x="10" y="10" width="380" height="280" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+                <line x1="30" y1="260" x2="370" y2="260" stroke="#000" stroke-width="2"/>
+                <line x1="30" y1="260" x2="30" y2="30" stroke="#000" stroke-width="2"/>
+                <path d="M30 260 L60 240 L90 220 L120 180 L150 150 L180 120 L210 100 L240 90 L270 80 L300 70" fill="none" stroke="#00366b" stroke-width="3"/>
+                <circle cx="30" cy="260" r="5" fill="#00366b"/>
+                <circle cx="60" cy="240" r="5" fill="#00366b"/>
+                <circle cx="90" cy="220" r="5" fill="#00366b"/>
+                <circle cx="120" cy="180" r="5" fill="#00366b"/>
+                <circle cx="150" cy="150" r="5" fill="#00366b"/>
+                <circle cx="180" cy="120" r="5" fill="#00366b"/>
+                <circle cx="210" cy="100" r="5" fill="#00366b"/>
+                <circle cx="240" cy="90" r="5" fill="#00366b"/>
+                <circle cx="270" cy="80" r="5" fill="#00366b"/>
+                <circle cx="300" cy="70" r="5" fill="#00366b"/>
+                <text x="15" y="275" font-size="12" fill="#000">0</text>
+                <text x="15" y="45" font-size="12" fill="#000">100</text>
+            </svg>
+        </div>
+        <p>El percentil de crecimiento de Juan Pérez se encuentra en el 50%, lo que indica un crecimiento normal para su edad.</p>
+    </div>
+
+    <div id="nutricional" class="section">
+        <h2>Tabla de Información Nutricional</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Porción</th>
+                    <th>Calorías</th>
+                    <th>Proteínas</th>
+                    <th>Grasas</th>
+                    <th>Carbohidratos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Manzana</td>
+                    <td>1 unidad</td>
+                    <td>52</td>
+                    <td>0.3 g</td>
+                    <td>0.2 g</td>
+                    <td>14 g</td>
+                </tr>
+                <tr>
+                    <td>Leche</td>
+                    <td>1 vaso (250 ml)</td>
+                    <td>150</td>
+                    <td>8 g</td>
+                    <td>8 g</td>
+                    <td>12 g</td>
+                </tr>
+                <tr>
+                    <td>Arroz</td>
+                    <td>1 taza</td>
+                    <td>200</td>
+                    <td>4 g</td>
+                    <td>0.4 g</td>
+                    <td>45 g</td>
+                </tr>
+                <tr>
+                    <td>Carne de Pollo</td>
+                    <td>1 pieza (100 g)</td>
+                    <td>165</td>
+                    <td>31 g</td>
+                    <td>3.6 g</td>
+                    <td>0 g</td>
+                </tr>
+                <tr>
+                    <td>Pan Integral</td>
+                    <td>1 rebanada</td>
+                    <td>80</td>
+                    <td>4 g</td>
+                    <td>1 g</td>
+                    <td>14 g</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="additional-info" class="section">
+        <h2>Información Adicional</h2>
+        <div class="additional-info">
+            <p><strong>Consejos Nutricionales:</strong> Para asegurar un crecimiento saludable, es importante incluir una variedad de alimentos en la dieta de los niños, tales como frutas, verduras, proteínas y granos enteros. Asegúrate de que Juan tenga una dieta balanceada que le proporcione todas las vitaminas y minerales necesarios para su desarrollo.</p>
+            <p><strong>Actividades Recomendadas:</strong> Fomentar la actividad física es crucial para el desarrollo físico y emocional de los niños. Actividades como juegos al aire libre, deportes adaptados a su edad y tiempo de juego activo son beneficiosas para su salud y bienestar general.</p>
+            <p><strong>Recomendaciones de Hidratación:</strong> Mantener una adecuada hidratación es fundamental para la salud. Asegúrate de que Juan beba suficiente agua a lo largo del día y evita bebidas azucaradas o altas en calorías vacías.</p>
+        </div>
+    </div>
+
+    <div id="contacto" class="section">
+        <h2>Información de Contacto</h2>
+        <p>Para más información sobre Luti y sus Nutriaventuras o el Centro de Desarrollo Infantil (CDI), puedes contactarnos a través de los siguientes medios:</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Email: info@cdi-lutiyaventuras.com</p>
+        <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo, País</p>
+    </div>
+</body>
+</html>
