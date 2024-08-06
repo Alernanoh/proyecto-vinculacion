@@ -13,8 +13,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background-image: url('../img/fondo.jpg');
     background-size: cover;
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
     margin: 0;
     padding: 0;
     background-attachment: fixed;
@@ -23,9 +25,144 @@ body {
     padding: 5%;
 }
 
+
+/* Resto de tu CSS */
+
+.intro {
+    background-color: #007bff;
+    margin: 2% 8%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.btn{
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.intro .imagen {
+    max-width: 20%;
+    max-height: 20%;
+    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin-bottom: 2%;
+}
+
+.intro h1 {
+    font-weight: bold;
+    margin-bottom: 2%;
+    font-size: 300%;
+}
+
+.genero {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-icon {
+    width: 50%;
+    height: 50%;
+    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form h2 {
+    color: #ccc;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.form-floating {
+    width: 100%;
+}
+
+.intro .imagen {
+    max-width: 20%;
+    max-height: 20%;
+    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin-bottom: 2%;
+}
+
+.intro h1 {
+    font-weight: bold;
+    margin-bottom: 2%;
+    font-size: 300%;
+
+}
+
+.form-check {
+    margin-bottom: -10%;
+    /* Ajusta el espaciado entre los radio buttons */
+}
+
+.form-check-label {
+    margin-left: -10%;
+    color: #CDFBE7;
+}
+
+
+
+.titulo {
+    color: #CDFBE7;
+}
+
+
+.percentil {
+
+    background-color: #ccc;
+    height: 5%;
+    width: 500%;
+
+}
+.item{
+    justify-content: flex-start;
+}
+/* Ajustes generales para los gráficos */
+.canvas-container {
+    width: 195%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-start;
+    /* Centra el canvas horizontalmente */
+    align-items: center;
+    /* Centra el canvas horizontalmente */
+}
+
+
+
+
+
+#growthChart,
+#secondChart,
+#thirdChart,
+#fourChart,
+#fiveChart,
+#sixChart {
+    width: 100% !important;
+    /* Asegura que el canvas ocupe el 100% del contenedor */
+    height: 400px;
+    /* Ajusta la altura de los gráficos */
+}
+
+/*--------------------------------------------------------------------------*/
 /*Estilo ficha*/
 .cdi-overview {
-    background-color: #D7FAB4;
+    background-color: #fdfdab;
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -44,10 +181,13 @@ body {
 }
 
 .cdi-overview .cdi-title {
-    text-align: justify;
-    padding-left: 3%;
-    margin-bottom: 2%;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 300%;
 }
+
+
 
 /*ficha IMC*/
 .cdi-overview .cdi-info {
@@ -62,6 +202,7 @@ body {
     margin-left: 5%;
     margin-bottom: 5%;
 }
+
 .cdi-info .calculo {
     margin-right: 74%;
 }
@@ -72,42 +213,39 @@ body {
 .cdi-genero {
     position: relative;
     margin-left: 60%;
-    margin-top: -30%;
+    margin-top: -90%;
     max-width: 30%;
     max-height: 30%;
     margin-bottom: 2%;
+    top: 90%;
 }
 
-.cdi-genero .img-icon {
-    max-width: 60%;
-    max-height: 60%;
-    border-radius: 50%;
-    margin-bottom: 2%;
-    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
-}
 
 .cdi-genero .cdi-check {
     position: relative;
 }
 
-.cdi-genero .cdi-item {
+.cdi-item {
     display: inline-block;
     margin-bottom: 30%;
 }
- .txt-area{
+
+.txt-area {
     display: flex;
-    justify-content: flex-start; 
-    margin-top:-25%;
+    justify-content: flex-start;
+    margin-top: -25%;
     margin-left: 18%;
 }
-.txt-area .alerta{
-    width: 300px; 
+
+.txt-area .alerta {
+    width: 300px;
     height: 150%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
 }
+
 /*CDI categoria*/
 .cdi-categoria {
     background-color: #CDFBE7;
@@ -117,8 +255,10 @@ body {
     max-height: 30%;
     padding: 8px;
     margin-bottom: 2%;
+    top: 50%;
 }
-.cdi-categoria .txt-title{
+
+.cdi-categoria .txt-title {
     margin-bottom: 2%;
     font-size: 25px;
     margin-top: 3%;
@@ -130,19 +270,22 @@ body {
     margin-top: 3%;
     margin-bottom: 2%;
 }
-.cdi-categoria .cdi-percentil{
+
+.cdi-categoria .cdi-percentil {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width:100%; 
+    max-width: 100%;
 }
-.cdi-percentil canvas{
-  
-    max-width:80%; 
-    max-height:100%;
+
+.cdi-percentil canvas {
+
+    max-width: 80%;
+    max-height: 100%;
     margin-bottom: 5%;
 }
+
 /*-----Dietas-------*/
 .cdi-dietas {
     display: grid;
@@ -175,26 +318,47 @@ body {
 .cdi-comentario {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
-    max-width: 90%; 
+    flex-wrap: wrap;
+    max-width: 90%;
     margin-left: 5%;
 }
 
 .comentario-container {
-    flex: 1 1 45%; 
+    flex: 1 1 45%;
     margin: 0 10px;
-    min-width: 200px; 
+    min-width: 200px;
 }
 
 .comentarios {
     width: 100%;
     box-sizing: border-box;
     margin-top: 2%;
-    max-width: 100%; 
-    resize: none; 
+    max-width: 100%;
+    resize: none;
     font-size: 16px;
 }
 
+/*ultimos estilos*/
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Ajusta según sea necesario */
+}
+
+.center-form .card {
+    width: 100%;
+    max-width: 100%;
+    text-align: justify;
+    /* Ajusta según sea necesario */
+}
+
+.persentiles,
+.mb-4 {
+    text-align: center;
+}
 
 /*Diseño responsive*/
 @media screen and (max-width: 1220px) {
@@ -266,12 +430,14 @@ body {
     /*comentarios*/
     .cdi-comentario {
         flex-direction: column;
-        margin-left: 5%; /* Ajusta los márgenes en pantallas más pequeñas */
+        margin-left: 5%;
+        /* Ajusta los márgenes en pantallas más pequeñas */
     }
 
     .comentario-container {
         margin: 10px 0;
-        min-width: auto; /* Permite que el ancho mínimo sea flexible en pantallas pequeñas */
+        min-width: auto;
+        /* Permite que el ancho mínimo sea flexible en pantallas pequeñas */
     }
 }
 

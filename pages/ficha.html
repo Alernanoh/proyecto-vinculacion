@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/ficha.css">
     <link rel="stylesheet" href="../css/navegador.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Registro</title>
+    <title>ficha</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">LUTI Y SUS NUTRIAVENTURAS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,172 +34,187 @@
                         </li>
                     </ul>
                 </div>
-            </div> 
+            </div>
         </nav>
     </header>
-    <div class="cdi-overview">
-        <h1 class="cdi-name">Nombre del CDI asignado</h1>
-        <img class="imagen" src="../img/Imagen de cdi.jpeg" alt="CDI">
-    </div>
-    <main class="cdi-overview">
-        <h2 class="cdi-title">Ficha de calculo IMC:</h2>
-        <form action="includes/formhandlerinc.php" method="post">
-            <section class="cdi-info">
-                <div class="datos">
-                    <label for="cedula">Cédula:</label>
-                    <input type="text" id="cedula" placeholder="Ingrese la celula del niño">
-                    <br><br>
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" placeholder="Ingrese los dos nombres del niño/a">
-                    <br><br>
-                    <label for="apellido">Apellido Completo:</label>
-                    <input type="text" id="apellido" placeholder="Ingrese los dos apellidos del niño/a">
-                    <br><br>
-                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-                    <input type="date" id="fecha-nacimiento" onchange="calcularEdad()">
-                    <br><br>
-                    <label for="edad">Edad</label>
-                    <input type="text" id="edad" placeholder="Edad" readonly>
-                    <br><br>
-                    <label for="meses">Meses</label>
-                    <input type="text" id="meses" placeholder="Meses" readonly>
-                    <br><br>
-                    <label><strong>Medidas Antropometricas</strong></label>
-                    <br><br>
-                    <label for="peso">Peso (kg)</label>
-                    <input type="number" id="peso" placeholder="Ingresar el peso en kg">
-                    <br><br>
-                    <label for="talla">Talla (mt)</label>
-                    <input type="number" id="talla" placeholder="Ingresar la talla en metros">
-                    <br><br>
-                    <label for="perimetro-cefalico">Perímetro cefálico(cm)</label>
-                    <input type="text" id="perimetro-cefalico" placeholder="Ingresar el Perímetro cefálico">
-                    <br><br>
-                    <label for="perimetro-toracico">Perímetro torácico(cm)</label>
-                    <input type="text" id="perimetro-cefalico" placeholder="Ingresar el Perímetro torácico">
-                    <br><br>
-                    <label for="perimetro-abdominal">Perímetro Abdominal(cm)</label>
-                    <input type="text" id="perimetro-abdominal" placeholder="Ingresar el Perímetro Abdominal">
-                    <br><br>
-                    <label><strong>Signos Vitales</strong></label>
-                    <br><br>
-                    <label for="frecuencia-cardiaca">FC: Frecuencia Cardíaca</label>
-                    <input type="text" id="frecuencia-cardiaca" placeholder="Ingresar la Frecuencia Cardíaca">
-                    <br><br>
-                    <label for="frecuencia-respiratoria">FR: Frecuencia Respiratoria</label>
-                    <input type="text" id="frecuencia-respiratoria" placeholder="Ingresar la Frecuencia Respiratoria">
-                    <br><br>
-                    <label for="saturacion-oxigeno">SPO2: Saturación de Oxígeno</label>
-                    <input type="text" id="saturacion-oxigeno" placeholder="Ingresar la Saturación de Oxígeno">
-                    <br><br>
-                    <label for="temperatura-corporal">T°: Temperatura Corporal</label>
-                    <input type="text" id="temperatura-corporal" placeholder="Ingresar la Temperatura Corporal">
-                    <br><br>
-                    <label><strong>Valores Hemodinámicos</strong></label>
-                    <br><br>
-                    <label for="hemog">Hemoglobina</label>
-                    <input type="text" id="hemog" placeholder="Ingresar los niveles de hemoglobina">
-                    <br><br>
-                 
-                </div>
-                <div class="calculo">
-                 <button type="button" onclick="calcularIMC()">Calcular</button>
-                </div>
-               
-            </section>
+    <!--fin del navegador-->
 
-            <section class="cdi-genero">
-                <fieldset>
-                    <img id="gender-img" class="img-icon" src="../img/icono_perfil.avif" alt="Imagen de usuario"/>
-                    <div class="cdi-check">
-                        <legend>Género</legend>
-                        <div class="cdi-item">
-                            <label for="id-masculino">Masculino</label>
-                            <input type="radio" name="genero" id="id-masculino" value="masculino">
-                        
-                            <label for="id-femenino">Femenino</label>
-                            <input type="radio" name="genero" id="id-femenino" value="femenino">
-                        </div>
-                    </div>
-                    <div class="txt-area">
-                        <textarea class="alerta" id="IMC" rows="5" placeholder="Mensaje de Alerta" readonly></textarea>
-                   </div> 
-                </fieldset>
-            </section>
-            
-            <section class="cdi-categoria">
-               
-                 <div class="cdi-percentil">
-                    <h1 class="txt-title">Logintud/Edad Niño</h1>
-                    <canvas id="growthChart"></canvas>
+    <section class="container-fluid intro d-flex flex-column align-items-center">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Nombre del CDI asignado</h1>
+            <img class="img-fluid imagen" src="../img/Imagen de cdi.jpeg" alt="CDI">
+        </div>
+    </section>
 
-                    <h1 class="txt-title">Logintud/Edad Niña</h1>
-                    <canvas id="secondChart"></canvas> 
-
-                    <h1 class="txt-title">Peso/Edad Niño</h1>
-                    <canvas id="thirdChart"></canvas> 
-
-                    <h1 class="txt-title">Peso/Edad Niña</h1>
-                    <canvas id="fourChart"></canvas> 
-          
-                      <h1 class="txt-title">IMC/Edad Niña</h1>
-                    <canvas id="fiveChart"></canvas> 
-               
-                    <h1 class="txt-title">IMC/Edad Niño</h1>
-                    <canvas id="sixChart"></canvas> 
-                
+    <main class="container-fluid intro d-flex flex-column align-items-center">
+        <section class="row w-100 justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center genero">
+                <img src="/img/icono_perfil.avif" class="img-thumbnail img-icon" alt="...">
             </div>
-            </section>
+        </section>
+        <!--Datos Personales-->
+        <div class="col-md-6">
+            <form class="form">
+                <h2>DATOS PERSONALES</h2>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Cedula de identidad</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre Completo">
+                    <label for="floatingInput">Nombre Completo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Apellidos Completos">
+                    <label for="floatingInput">Apellidos Completos</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" placeholder="Fecha de Nacimiento">
+                    <label for="floatingInput">Fecha de Nacimiento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="edad">
+                    <label for="floatingInput">Edad</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="meses">
+                    <label for="floatingInput">Meses</label>
+                </div>
 
-
-            <section>
-                <h4>Tipo de dietas</h4>
-                <div class="cdi-dietas">
-                    <div>
-                        <input type="checkbox" id="dieta1">
-                        <label for="dieta1">Dieta 1</label>
+                <!--Genero-->
+                <h3 class="mt-4 titulo">Género</h3>
+                <div class="col-md-6 d-flex flex-row justify-content-center">
+                    <div class="form-check mb-2">
+                        <input type="radio" name="genero" id="id-masculino" value="masculino" class="form-check-input">
+                        <label for="id-masculino" class="form-check-label">Masculino</label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="dieta2">
-                        <label for="dieta2">Dieta 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta3">
-                        <label for="dieta3">Dieta 3</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta4">
-                        <label for="dieta4">Dieta 4</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta5">Dieta 5</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta6">Dieta 6</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta7">Dieta 7</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta8">Dieta 8</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta9">Dieta 9</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="dieta5">
-                        <label for="dieta10">Dieta 10</label>
+                    <div class="form-check">
+                        <input type="radio" name="genero" id="id-femenino" value="femenino" class="form-check-input">
+                        <label for="id-femenino" class="form-check-label">Femenino</label>
                     </div>
                 </div>
-            </section>
-            <section class="cdi-comidas">
-                <label for="num-comidas">Número de comidas:</label>
-                <select id="num-comidas">
+                <!--Medidas Antopometricas-->
+                <h2>Medidas Antopometricas</h2>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Peso(Kg)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Talla(cm)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Perímetro Cefálico (cm) </label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Perímetro Torácico (cm) </label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Perímetro Abdominal (cm) </label>
+                </div>
+                <!---Signos Vitales-->
+                <h2>Signos Vitales</h2>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">FC: Frecuencia Cardíaca</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">FR: Frecuencia Respiratoria</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">SPO2: Saturación de Oxígeno</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">T°: Temperatura Corporal</label>
+                </div>
+                <!---Valores-->
+                <h2>Valores Hemodinámicos</h2>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Hemoglobina</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <label for="floatingInput">Hemotocrito</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Resultados</label>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="calcularIMC()">Calcular</button>
+        </div>
+        </form>
+        <!--Fin de datos y de valores -->
+
+        </div>
+    </main>
+
+    <section class="container-fluid intro d-flex flex-column align-items-center">
+        <h2 class="mb-4 text-center titulo">Gráficos de Crecimiento</h2>
+        <div class="row d-flex justify-content-center w-100">
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">Longitud/Edad Niño</h3>
+                <div class="canvas-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">Longitud/Edad Niña</h3>
+                <div class="canvas-container">
+                    <canvas id="secondChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">Peso/Edad Niño</h3>
+                <div class="canvas-container">
+                    <canvas id="thirdChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">Peso/Edad Niña</h3>
+                <div class="canvas-container">
+                    <canvas id="fourChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">IMC/Edad Niña</h3>
+                <div class="canvas-container">
+                    <canvas id="fiveChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 text-center percentil">
+                <h3 class="titulo">IMC/Edad Niño</h3>
+                <div class="canvas-container">
+                    <canvas id="sixChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <h2 class="mb-4 text-center titulo">Dietas</h2>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">Hipercalorica</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">Hipocalorica</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">Mediterránea Infantil</label>
+        </div>
+
+        <section class="mb-4">
+            <div class="mb-3">
+                <label for="num-comidas" class="form-label titulo">Número de comidas:</label>
+                <select id="num-comidas" class="form-select">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -203,24 +222,28 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-            </section>
-            <section class="CDI-comentarios">
-                <h5 class="cdi-Tcomentario"><strong>Antecedentes</strong></h5>
-                <div class="cdi-comentario">
-                    <div class="comentario-container">
-                        <label for="antecedentes-padres">Antecedentes de los Padres:</label>
-                        <textarea id="antecedentes-padres" class="comentarios" name="antecedentes-padres" placeholder="Escribe los antecedentes de los padres aquí..."></textarea>
-                    </div>
-                    <div class="comentario-container">
-                        <label for="antecedentes-nino">Antecedentes del Niño:</label>
-                        <textarea id="antecedentes-nino" class="comentarios" name="antecedentes-nino" placeholder="Escribe los antecedentes del niño aquí..."></textarea>
+            </div>
+        </section>
+        <section>
+            <h5 class="mb-3"><strong class="titulo">Antecedentes</strong></h5>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="antecedentes-padres" class="form-label titulo">Antecedentes de los Padres:</label>
+                        <textarea id="antecedentes-padres" class="form-control" name="antecedentes-padres" placeholder="Escribe los antecedentes de los padres aquí..."></textarea>
                     </div>
                 </div>
-            </section>            
-        </form>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../js/percentil.js"></script>
-    <script src="../js/calculos.js"></script>
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="antecedentes-nino" class="form-label titulo">Antecedentes del Niño:</label>
+                        <textarea id="antecedentes-nino" class="form-control" name="antecedentes-nino" placeholder="Escribe los antecedentes del niño aquí..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>   
+
+    <script src="/js/percentil.js"></script>
 </body>
+
 </html>
