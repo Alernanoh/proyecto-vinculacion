@@ -69,15 +69,15 @@
                     <label for="floatingInput">Apellidos Completos</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="floatingInput" placeholder="Fecha de Nacimiento">
+                    <input type="date" class="form-control" id="fecha-nacimiento" placeholder="Fecha de Nacimiento" onchange="calcularEdad()">
                     <label for="floatingInput">Fecha de Nacimiento</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="edad">
+                    <input type="text" class="form-control" id="edad" placeholder="edad" readonly>
                     <label for="floatingInput">Edad</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="meses">
+                    <input type="text" class="form-control" id="meses" placeholder="meses" readonly>
                     <label for="floatingInput">Meses</label>
                 </div>
 
@@ -96,11 +96,11 @@
                 <!--Medidas Antopometricas-->
                 <h2>Medidas Antopometricas</h2>
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <input type="number" class="form-control" id="peso" placeholder="cedula de identidad">
                     <label for="floatingInput">Peso(Kg)</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="cedula de identidad">
+                    <input type="number" class="form-control" id="talla" placeholder="cedula de identidad">
                     <label for="floatingInput">Talla(cm)</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -144,12 +144,17 @@
                     <label for="floatingInput">Hemotocrito</label>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    <textarea class="form-control" placeholder="Leave a comment here" id="IMC"
                         style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Resultados</label>
+                    <label for="floatingTextarea2">Resultados Longitud/edad</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="Cpeso"
+                        style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Resultados Peso/edad</label>
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="calcularIMC()">Calcular</button>
+                <button type="button" class="btn btn-primary" onclick="botonAction()">Calcular</button>
         </div>
         </form>
         <!--Fin de datos y de valores -->
@@ -160,37 +165,37 @@
     <section class="container-fluid intro d-flex flex-column align-items-center">
         <h2 class="mb-4 text-center titulo">Gráficos de Crecimiento</h2>
         <div class="row d-flex justify-content-center w-100">
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container">
                 <h3 class="titulo">Longitud/Edad Niño</h3>
                 <div class="canvas-container">
                     <canvas id="growthChart"></canvas>
                 </div>
             </div>
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container-female">
                 <h3 class="titulo">Longitud/Edad Niña</h3>
                 <div class="canvas-container">
                     <canvas id="secondChart"></canvas>
                 </div>
             </div>
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container">
                 <h3 class="titulo">Peso/Edad Niño</h3>
                 <div class="canvas-container">
                     <canvas id="thirdChart"></canvas>
                 </div>
             </div>
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container-female">
                 <h3 class="titulo">Peso/Edad Niña</h3>
                 <div class="canvas-container">
                     <canvas id="fourChart"></canvas>
                 </div>
             </div>
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container-female">
                 <h3 class="titulo">IMC/Edad Niña</h3>
                 <div class="canvas-container">
                     <canvas id="fiveChart"></canvas>
                 </div>
             </div>
-            <div class="col-md-12 mb-4 text-center percentil">
+            <div class="col-md-12 mb-4 text-center percentil" id="chart-container">
                 <h3 class="titulo">IMC/Edad Niño</h3>
                 <div class="canvas-container">
                     <canvas id="sixChart"></canvas>
@@ -244,6 +249,7 @@
     </section>   
 
     <script src="../js/percentil.js"></script>
+    <script src="../js/calculos.js"></script>
 </body>
 
 </html>

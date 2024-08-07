@@ -167,8 +167,10 @@ const growthChart = new Chart(ctx, {
   },
 });
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Grafico peso/edad niño
+// longitud/edad niña
 
 const ctx2 = document.getElementById("secondChart").getContext("2d");
 const secondChart = new Chart(ctx2, {
