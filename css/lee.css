@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url("https://image.slidesdocs.com/responsive-images/background/forest-children-childlike-deep-powerpoint-background_962597fcb2__960_540.jpg") no-repeat center center fixed;
+    background-size: 100%;
+}
+
+.navbar {
+    background-color: #00366b; 
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #000000 !important; 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important; 
+    margin-right: 1rem;
+    font-weight: normal; 
+}
+
+.navbar-nav .nav-link.active {
+    color: #000000 !important; 
+    font-weight: bold; 
+}
+
+.nav-item {
+    padding-left: 12px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 25px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.section-border {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.14);
+}
+
+h2 {
+    color: #000000;
+}
+
+.direccion {
+    background: url("https://static.vecteezy.com/system/resources/previews/013/138/406/non_2x/meadow-panorama-3d-illustration-fantastic-landscape-with-rainbow-on-green-valley-kids-background-colorful-cute-scenery-with-flowers-spring-grass-blue-sky-for-children-s-sites-or-printing-free-vector.jpg") no-repeat center center fixed;
+    background-size: cover;
+    border: 2px solid #333;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+iframe {
+    border-radius: 15px;
+}
+
+.carousel-inner img {
+    height: 400px; /* Ajusta la altura según sea necesario */
+    object-fit: cover;
+}
+.carousel-container {
+    padding: 20px;
+}
