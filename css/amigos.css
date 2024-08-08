@@ -139,3 +139,65 @@ h2 {
 iframe {
     border-radius: 15px;
 }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px; /* Ajusta según tus necesidades */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd; /* Opcional: para separar la imagen del contenido */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #666;
+}
+
+.card-list {
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: disc;
+}
+
+.card-list li {
+    margin-bottom: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card-description {
+        font-size: 0.9em;
+    }
+
+    .card-list {
+        padding-left: 15px;
+    }
+}
+
