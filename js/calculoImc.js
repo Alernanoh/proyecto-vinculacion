@@ -10,7 +10,7 @@ function botonActionIMC(){
             allCharts.forEach(chart => {
                 if (chart.id === 'chart-container') {
                     // manejarCalculoPeso() ;
-                  // Mostrar gráficos de niño
+                    manejarCalculoimc();
                 } else {
                     chart.style.display = 'none'; // Ocultar gráficos de niña
                 }
