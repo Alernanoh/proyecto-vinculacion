@@ -29,7 +29,7 @@ body {
 /* Resto de tu CSS */
 
 .intro {
-    background-color: #007bff;
+    background-color: rgba(173, 216, 230, 0.8);; /* Color azul con transparencia del 80% */
     margin: 2% 8%;
     border-radius: 20px;
     box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.5);
@@ -39,6 +39,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 3%;
+    padding: 20px; /* Agrega un padding para mejorar la apariencia */
 }
 .btn{
     margin-bottom: 3%;
@@ -80,7 +81,7 @@ body {
 }
 
 .form h2 {
-    color: #ccc;
+    color: black;
     font-weight: bold;
     margin-top: 3%;
     margin-bottom: 5%;
@@ -118,7 +119,7 @@ body {
 
 
 .titulo {
-    color: #CDFBE7;
+    color: black;
 }
 
 
